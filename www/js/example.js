@@ -1,7 +1,7 @@
 // Using example
-let appID = "<appID>" // Coloque o appID da tua aplicação no facebook aqui
-let backgroundImage = "img/vaisercagao.jpg";
-let stickerImage = "img/claudia.png";
+let appID = "573638158100677" // Coloque o appID da tua aplicação no facebook aqui
+let stickerImage = "https://i.imgur.com/YDCNlcM.png";
+let backgroundImage = "https://i.imgur.com/fnGsOsw.jpg";
 let attributeURL = null; // Link pra url, quando o usuario clica o cordova manda uma request pra ele
 let backgroundTopColor = null
 let backgroundBottomColor = null
@@ -22,5 +22,5 @@ cordova.plugin = {
 
 console.log(JSON.stringify(opts), JSON.stringify(cordova.plugin));
 document.getElementById("send").addEventListener("click", e => {
-  cordova.plugin.igstory.shareToStory(opts, s => console.log("success: ", s), e => console.log("error: ", e)) // .then((s) => console.log(s)).catch(e => console.log(e));
+  cordova.plugin.igstory.shareToStory(opts, s => console.log("success: ", s), e => window.alert("error: " + e)) // .then((s) => console.log(s)).catch(e => console.log(e));
 })
